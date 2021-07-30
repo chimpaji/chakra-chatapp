@@ -1,0 +1,25 @@
+import { Box, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import React from "react";
+
+const ChatFile = () => {
+  return (
+    <HStack w="full" px={8} spacing={3}>
+      <Box w={14} h={14} rounded="lg" bg="gray.100" />
+      <VStack spacing={0} alignItems="flex-start" w="full">
+        <Heading fontSize={12} w="full">
+          PhotoDenver.jpg
+        </Heading>
+        <HStack w="full" justify="space-between">
+          <Text fontSize={12} color="gray.400">
+            10.03.2021 at 11:43
+          </Text>
+          <Text fontSize={12} color="gray.100">
+            175 Kb
+          </Text>
+        </HStack>
+      </VStack>
+    </HStack>
+  );
+};
+
+export default ChatFile;

@@ -1,10 +1,18 @@
 import React from "react";
-import { VStack, IconButton, Tooltip, Icon } from "@chakra-ui/react";
+import {
+  VStack,
+  IconButton,
+  Tooltip,
+  Icon,
+  useColorMode,
+} from "@chakra-ui/react";
 import { MdDashboard, MdSearch, MdNotifications, MdMail } from "react-icons/md";
 import { HiLightningBolt, HiTag } from "react-icons/hi";
 import { GiSpiderFace } from "react-icons/gi";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = () => {
+  const { toggleColorMode, colorMode } = useColorMode();
   return (
     <VStack p={6} justify="space-between" alignItems="center" w="full">
       {/* Icon with tool tip */}
@@ -46,6 +54,14 @@ const Navbar = () => {
             color="gray.500"
             icon={<MdMail />}
             aria-label="Messages"
+          />
+        </Tooltip>
+        <Tooltip label="Dark Mode 😎" placement="right">
+          <IconButton
+            color="gray.500"
+            icon={colorMode === "dark" ? <FaMoon /> : <FaSun />}
+            aria-label="DarkMode"
+            onClick={toggleColorMode}
           />
         </Tooltip>
       </VStack>
