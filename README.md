@@ -1,5 +1,6 @@
 # Chat App Frontend only by React + Chakra
-site:https://chakra-chatapp.netlify.app
+site:https://chakraui-todo.netlify.app
+
 ![Chakra Chat App](https://i.imgur.com/FvYK2hV.jpg "App screenshot")
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
